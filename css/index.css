@@ -1,258 +1,407 @@
-main > section:first-child{
-    background-color: var(--couleur-secondaire);
-    color: var(--couleur-blanc);
-    padding: 80px 40px;
-    min-height: 90vh;
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 100%;
+    max-width: 100% !important;
+    padding: 0 !important;
 }
 
-main > section:first-child h1 {
-    font-size: 48px;
+main {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    font-family: var(--police-corps);
+    background-color: var(--couleur-secondaire);
+    color: var(--couleur-texte);
+    line-height: 1.6;
+    font-size: 16px;
+    padding-top: 0;
+}
+
+section {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 26, 46, 0.65);
+    z-index: 1;
+}
+
+.hero-contenu {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 20px;
+    max-width: 900px;
+}
+
+.hero-texte h1 {
+    font-family: var(--police-titre);
+    font-size: 52px;
+    font-weight: 700;
     color: var(--couleur-blanc);
-    margin-bottom: 25px;
+    margin-top: 20px;
     line-height: 1.2;
 }
 
-main > section:first-child p {
+.hero-texte p {
     font-size: 18px;
     color: rgba(255, 255, 255, 0.85);
     margin-bottom: 35px;
-    max-width: 600px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-main > section:first-child a {
-    display: inline-block;
+.hero-boutons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.hero-boutons a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     padding: 14px 28px;
     border-radius: 8px;
+    font-family: var(--police-corps);
     font-weight: 600;
     font-size: 16px;
-    margin-right: 15px;
-    margin-top: 10px;
     background-color: var(--couleur-principale);
     color: var(--couleur-secondaire);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-main > section:first-child a:hover {
+.hero-boutons a:hover {
     transform: translateY(-3px);
+    opacity: 0.9;
 }
 
-main > section:first-child > div {
+.hero-stats {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 30px;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    flex-direction: row;
     align-items: center;
 }
 
-main > section:first-child > div > div {
-    /* background-color: rgba(255, 255, 255, 0.8); */
-    /* border: 1px solid rgba(255, 255, 255, 0.15); */
+.stat {
+    background-color: transparent;
+    border: 2px solid var(--couleur-blanc);
     border-radius: 10px;
     padding: 15px 25px;
-    text-align: center;
 }
 
-main > section:first-child > div > div p {
-    font-size: 22px;
-    font-weight: 700;
+.stat p {
     color: var(--couleur-principale);
+    font-family: var(--police-titre);
+    font-weight: 700;
+    font-size: 18px;
     margin-bottom: 0;
 }
 
-main > section:nth-child(2) {
-    background-color: var(--couleur-blanc);
-    padding: 80px 40px;
+.comment-ca-marche {
+    background-color: var(--couleur-secondaire);
     max-width: 100%;
+    padding: 80px 40px;
+    text-align: center;
 }
 
-main > section:nth-child(2) {
+.comment-ca-marche h2 {
+    color: var(--couleur-blanc);
+    font-family: var(--police-titre);
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.comment-ca-marche h2 i {
+    color: var(--couleur-principale);
+    margin-left: 10px;
+}
+
+.comment-ca-marche .section-sous-titre {
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+.cards-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 25px;
     max-width: 1200px;
     margin-left: auto;
-    margin-right:  auto;
-    margin-top: 40px;
+    margin-right: auto;
 }
 
-main > section:nth-child(2) > div > div {
-    background-color: var(--couleur-fond) !important;
-    border-radius: 12px !important;
-    padding:  30px 20px !important;
-    text-align: center !important;
-    border-top: 4px solid var(--couleur-principale) !important;
-    box-shadow: 0 4px 15px rgba( 0, 0, 0, 0.08) !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-    cursor: pointer !important;
-    border-left: none !important;
-    border-right: none !important;
-    border-bottom: none !important;
+.card-etape {
+    background-color: #2e2e3e;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border: 2px solid rgba(88, 88, 88, 0.897);
 }
 
-main > section:nth-child(2) > div > div:hover {
-    transform: translateY(-5px) !important;
-    box-shadow: 0 8px 25px rgba( 0, 0, 0, 0.15) !important;
+.card-etape:hover {
+    transform: translateY(-5px);
 }
 
-main > section:nth-child(2) > div > div h3 {
-    color: var(--couleur-secondaire) !important;
-    margin-top: 15px !important;
-    margin-bottom: 10px !important;
+
+.icone-etape {
+    display: block;
+    font-size: 32px;
+    color: var(--couleur-principale);
+    margin-bottom: 15px;
 }
 
-main > section:nth-child(2) > div > div p {
-    font-size: 14px !important;
-    color: var(--couleur-texte) !important;
-    margin-bottom: O !important;
+.card-etape p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 0;
 }
 
-main > section:nth-child(3) > div {
+.card-etape h3 {
+    color: var(--couleur-principale);
+    font-family: var(--police-titre);
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.categories {
+    background-color: var(--couleur-secondaire);
+    max-width: 100%;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.categories h2 {
+    color: var(--couleur-blanc);
+}
+
+.categories .section-sous-titre {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+.categories-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 40px;
 }
 
-main > section:nth-child(3) > div > div {
-    background-color: var(--couleur-blanc);
+.categorie-card {
+    background-color: #2e2e3e ;
     border-radius: 12px;
-    padding: 30px 25px;
+    padding: 35px 25px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba( 0, 0, 0, 0.08);
-    transition: transform 0.3s ease box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    border-bottom: 3px solid transparent;
 }
 
-main > section:nth-child(3) > div > div:hover {
+.categorie-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba( 0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-bottom: 3px solid var(--couleur-principale);
 }
 
-main > section:nth-child(3) > div > div h3 {
-    font-size: 18px;
-    color: var(--couleur-secondaire);
-    margin-bottom: 8px;
-}
-
-main > section:nth-child(3) > div > div p {
-    font-size: 14px;
+.categorie-card i {
+    font-size: 40px;
     color: var(--couleur-principale);
+    margin-bottom: 15px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.categorie-card:hover i {
+    transform: scale(1.15);
+}
+
+.categorie-card h3 {
+    color: var(--couleur-blanc);
+}
+
+.categorie-card p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
     font-weight: 600;
     margin-bottom: 0;
 }
 
-main > section:nth-child(4) {
+.temoignages {
     background-color: var(--couleur-secondaire);
-    padding: 80px 40px;
     max-width: 100%;
-}
-
-main > section:nth-child(4) h2 {
-    color: var(--couleur-blanc);
-}
-
-main > section:nth-child(4) > p {
-    color: rgba(255, 255, 255, 0.7);
+    padding: 80px 40px;
     text-align: center;
+    margin-bottom: 0;
 }
 
-main > section:nth-child(4) > div {
+.temoignages h2 {
+    font-family: var(--police-titre);
+    color: var(--couleur-blanc);
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.temoignages .section-sous-titre {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+.temoignages-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:  30px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 40px;
 }
 
-main > section:nth-child(4) > div > div {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+.temoignage-card {
+    background-color: #2e2e3e;
     border-radius: 12px;
-    padding: 30px;
+    padding: 30px 25px;
     text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease;
 }
 
-main > section:nth-child(4) > div > div:hover {
+.temoignage-card:hover {
     transform: translateY(-5px);
 }
 
-main > section:nth-child(4) > div > div img {
+.temoignage-card img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
-    border: 1px solid var(--couleur-principale);
+    margin-bottom: 15px;
+    border: 3px solid var(--couleur-principale);
+    display: block;
 }
 
-main > section:nth-child(4) > div > div p {
+.temoignage-texte {
     color: rgba(255, 255, 255, 0.85);
     font-style: italic;
-    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 10px;
 }
 
-main > section:nth-child(4) > div > div strong {
-    color: var(--couleur-principale);
+.temoignage-etoiles {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.temoignage-nom {
     display: block;
+    color: var(--couleur-principale);
+    font-family: var(--police-titre);
+    font-size: 16px;
     margin-bottom: 5px;
 }
 
-main > section:nth-child(4) > div > div span {
+.temoignage-role {
     color: rgba(255, 255, 255, 0.5);
-    font-size: 14px;
+    font-size: 13px;
 }
 
-main > section:nth-child(5) {
-    background-color: var(--couleur-principale);
-    padding: 80px 40px;
-    max-width: 100%;
-    text-align: center;
+.cta-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 16px;
+    padding: 50px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    transition: transform 0.3s ease;
 }
 
-main > section:nth-child(5) h2 {
-    color: var(--couleur-secondaire);
-    font-size: 36px;
-    margin-bottom: 15px;
+.cta-card:hover {
+    transform: translateY(-3px);
 }
 
-main > section:nth-child(5) p {
-    color: var(--couleur-secondaire);
-    font-size: 18px;
-    margin-bottom: 35px;
-    opacity: 0.85;
+.cta-texte h2 {
+    font-family: var(--police-titre);
+    color: var(--couleur-blanc);
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
-main > section:nth-child(5) a {
+.cta-texte p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 1;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.cta-btn {
     display: inline-block;
     padding: 16px 40px;
-    background-color: var(--couleur-secondaire);
-    color: var(--couleur-blanc);
+    background-color: var(--couleur-principale);
+    color: #222121;
     border-radius: 8px;
+    font-family: var(--police-titre);
     font-weight: 700;
     font-size: 16px;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    white-space: nowrap;
 }
 
-main > section:nth-child(5) a:hover {
+.cta-btn:hover {
     transform: translateY(-3px);
     opacity: 0.9;
-}
-
-.video-background {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
+    color: #d5d5d5;
 }
