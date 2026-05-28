@@ -309,3 +309,29 @@ img {
     background-color: var(--couleur-principale);
     color: var(--couleur-secondaire);
 } 
+
+@media (max-width: 768px) {
+    #mainNavbar .navbar-collapse{
+        flex-direction: column !important;
+    }
+
+    #mainNavbar .navbar-nav {
+        flex-direction: column !important;
+        gap: 0;
+    }
+
+    .footer-colonnes {
+        flex-direction: column !important;
+        gap: 30px;
+    }
+
+    .footer-colonnes > div:first-child {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 28px; }
+    h2 { font-size: 24px; }
+    footer { padding: 40px 20px 20px; }
+}
