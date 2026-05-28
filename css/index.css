@@ -405,3 +405,24 @@ section {
     opacity: 0.9;
     color: #d5d5d5;
 }
+
+@media (max-width: 768px) {
+    .hero-texte h1 { font-size: 34px; }
+    .cards-container { grid-template-columns: repeat(2, 1fr); }
+    .categories-grid { grid-template-columns: repeat(2, 1fr); }
+    .cta-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 24px;
+    }
+
+    .cta-texte h2 { text-align: center; }
+    .cta-texte p { text-align: center; }
+}
+
+@media (max-width: 480px) {
+    .hero-texte h1 { font-size: 26px; }
+    .cards-container { grid-template-columns: 1fr; }
+    .categories-grid { grid-template-columns: 1fr; }
+    .hero-stats { flex-direction: column; }
+}
