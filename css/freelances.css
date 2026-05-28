@@ -1,0 +1,223 @@
+.freelances-hero {
+    background-color: var(--couleur-secondaire);
+    padding: 246px 70px 80px;
+    width: 100%;
+    max-width: 100%;
+}
+
+main {
+    padding-top: 0;
+}
+
+.freelances-hero-contenu {
+    max-width: 700px;
+}
+
+.freelances-hero-badge {
+    display: inline-block;
+    background: rgba(232, 168, 53, 0.12);
+    border: 1px solid rgba(232, 168, 53, 0.35);
+    color: var(--couleur-principale);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 6px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.freelances-hero h1 {
+    font-family: var(--police-titre);
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--couleur-blanc);
+    line-height: 1.15;
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.freelances-hero h1 span {
+    color: var(--couleur-principale);
+}
+
+.freelances-hero p {
+    font-size: 17px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.freelances-filtres {
+    background-color: var(--couleur-secondaire);
+    padding: 0 70px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+.filtre-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(232, 168, 53, 0.2);
+    color: rgba(255, 255, 255, 0.7);
+    font-family: var(--police-corps);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.filtre-btn:hover {
+    border-color: var(--couleur-principale);
+    color: var(--couleur-principale);
+    background: rgba(232, 168, 53, 0.08);
+}
+
+.filtre-btn.actif {
+    background-color: var(--couleur-principale);
+    border-color: var(--couleur-principale);
+    color: var(--couleur-secondaire);
+    font-weight: 700;
+}
+
+.freelances-section {
+    background-color: var(--couleur-fond);
+    padding: 60px 40px;
+    width: 100%;
+    margin: 0 ;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.freelance-card {
+    background-color: var(--couleur-blanc);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 36px 24px 28px;
+}
+
+.freelance-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.freelance-card img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    border: 2px solid var(--couleur-principale);
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+.freelance-card-corps {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.freelance-card-corps h3 {
+    font-family: var(--police-titre);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--couleur-secondaire);
+    margin-bottom: 4px;
+}
+
+.freelance-metier {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--couleur-principale);
+    margin-bottom: 8px;
+}
+
+.freelance-desc {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 14px;
+    flex: 1;
+}
+
+.freelance-infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding: 10px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.freelance-infos span {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--couleur-texte);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.freelance-infos .bi-star-fill {
+    color: var(--couleur-principale);
+}
+
+.freelance-btn {
+    display: block;
+    text-align: center;
+    background-color: var(--couleur-secondaire);
+    color: var(--couleur-blanc);
+    font-family: var(--police-titre);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.freelance-btn:hover {
+    background-color: var(--couleur-principale);
+    color: var(--couleur-secondaire);
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .freelances-hero { padding: 120px 40px 60px; }
+    .freelances-hero h1 { font-size: 34px; }
+    .freelances-filtres { padding: 0 24px 30px; }
+    .freelances-section { 
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px 24px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .freelances-hero h1 { font-size: 26px; }
+    .freelances-filtres { padding: 0 16px 24px; gap: 8px; }
+    .filtre-btn { font-size: 12px; padding: 7px 14px; }
+    .freelances-section {
+        grid-template-columns: 1fr;
+        padding: 30px 16px;
+    }
+}

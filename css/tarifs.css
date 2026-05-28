@@ -1,0 +1,332 @@
+main {
+    padding-top: 0;
+}
+
+.tarifs-hero,
+.tarifs-section,
+.tarifs-faq {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.tarifs-hero {
+    background-color: var(--couleur-secondaire);
+    padding: 140px 70px 80px;
+    width: 100%;
+}
+
+.tarifs-hero-contenu {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tarifs-hero-badge {
+    display: inline-block;
+    background: rgba(232, 168, 53, 0.12);
+    border: 1px solid rgba(232, 168, 53, 0.35);
+    color: var(--couleur-principale);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.tarifs-hero h1 {
+    font-family: var(--police-titre);
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--couleur-blanc);
+    line-height: 1.15;
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.tarifs-hero h1 span {
+    color: var(--couleur-principale);
+}
+
+.tarifs-hero p {
+    font-size: 17px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.tarifs-section {
+    background-color: var(--couleur-secondaire);
+    padding: 60px 70px 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    align-items: stretch;
+}
+
+.tarif-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(232, 168, 53, 0.2);
+    border-radius: 20px;
+    padding: 36px 28px;
+    flex: 1;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.tarif-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--couleur-principale);
+}
+
+.tarif-card--populaire {
+    background-color: rgba(232, 168, 53, 0.08);
+    border: 2px solid var(--couleur-principale);
+    transform: scale(1.04);
+}
+
+.tarif-card--populaire:hover {
+    transform: scale(1.04) translateY(-6px);
+}
+
+.tarif-badge-populaire {
+    display: inline-block;
+    background-color: var(--couleur-principale);
+    color: var(--couleur-secondaire);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.tarif-card-header {
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tarif-card-header h2 {
+    font-family: var(--police-titre);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--couleur-blanc);
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.tarif-prix {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.tarif-prix strong {
+    font-family: var(--police-titre);
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--couleur-principale);
+}
+
+.tarif-prix small {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.tarif-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.tarif-features li {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feature-ok {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.feature-ok i {
+    color: var(--couleur-principale);
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.feature-non {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.feature-non i {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.tarif-btn {
+    display: block;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--couleur-blanc);
+    font-family: var(--police-titre);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 13px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+    margin-top: auto;
+}
+
+.tarif-btn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--couleur-blanc);
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.tarif-btn--populaire {
+    background-color: var(--couleur-principale);
+    color: var(--couleur-secondaire);
+}
+
+.tarif-btn--populaire:hover {
+    background-color: #f0b830;
+    color: var(--couleur-secondaire);
+}
+
+.tarifs-faq {
+    background-color: #13132a;
+    padding: 80px 70px;
+    width: 100%;
+}
+
+.tarifs-faq h2 {
+    color: var(--couleur-blanc);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.tarifs-faq .section-sous-titre {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 50px;
+}
+
+.tarifs-faq .accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tarifs-faq .accordion-item {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(232, 168, 53, 0.2);
+    border-radius: 12px !important;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.tarifs-faq .accordion-button {
+    background-color: transparent;
+    color: var(--couleur-blanc);
+    font-family: var(--police-titre);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 20px 24px;
+}
+
+.tarifs-faq .accordion-button:not(.collapsed) {
+    background-color: rgba(232, 168, 53, 0.08);
+    color: var(--couleur-principale);
+    box-shadow: none;
+}
+
+.tarifs-faq .accordion-button::after {
+    filter: invert(1);
+}
+
+.tarifs-faq .accordion-button:not(.collapsed)::after {
+    filter: invert(0.7) sepia(1) saturate(3) hue-rotate(5deg);
+}
+
+.tarifs-faq .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(232, 168, 53, 0.3);
+}
+
+.tarifs-faq .accordion-body {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    line-height: 1.8;
+    padding: 0 24px 20px;
+}
+
+footer {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .tarifs-hero {
+        padding: 120px 24px 60px;
+    }
+
+    .tarifs-hero h1 {
+        font-size: 34px;
+    }
+
+    .tarifs-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 24px;
+        gap: 20px;
+    }
+
+    .tarif-card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .tarif-card--populaire {
+        transform: scale(1);
+    }
+
+    .tarif-card--populaire:hover {
+        transform: translateY(-6px);
+    }
+
+    .tarifs-faq {
+        padding: 60px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tarifs-hero h1 {
+        font-size: 26px;
+    }
+
+    .tarif-prix strong {
+        font-size: 28px;
+    }
+
+    .tarifs-faq {
+        padding: 50px 16px;
+    }
+}
