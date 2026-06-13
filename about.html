@@ -10,12 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <title>AfriTalent</title>
 </head>
 <body>
     
-    <header class="content">
+    <header>
         <nav class="navbar navbar-expand-md fixed-top" id="mainNavbar">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
@@ -30,12 +31,12 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                        <li class="nav-item"><a class="nav-link" href="feelances.html">Freelances</a></li>
+                        <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
                         <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                         <li class="nav-item">
-                            <a class="nav-link btn-rejoindre" href="feelances.html">Rejoindre AfriTalent</a>
+                            <a class="nav-link btn-rejoindre" href="freelances.html">Rejoindre AfriTalent</a>
                         </li>
                     </ul>
 
@@ -45,119 +46,136 @@
     </header>
 
     <main>
-        <section>
-        <h2>Notre histoire</h2>
-            <p>
-                Fondée en 2022 à Dakar, AfriTalent est née d'un constat simple : l'Afrique regorge de talents
-                tech exceptionnels qui manquent de visibilité et de missions à leur mesure.
-                Notre parcours est marqué par l'innovation et la passion de partager avec notre communauté.
-                Depuis notre lancement, nous avons accompagné plus de 2 500 freelances dans leur développement
-                professionnel et connecté des centaines d'entreprises aux meilleurs talents du continent.
-            </p>
-            <video autoplay muted loop playsinline src="images/notrehistoire.mp4" height="750"></video>
+        <section class="about-hero">
+            <video class="about-video" autoplay muted loop playsinline src="images/notrehistoire.mp4"></video>
+            <div class="about-overlay"></div>
+
+            <div class="about-hero-contenu">
+                <span class="about-hero-badge">✦ Depuis 2022</span>
+                <h2>Notre<br><span>histoire</span></h2>
+                <div class="about-hero-ligne"></div>
+                <p>
+                    Fondée en 2022 à Dakar, AfriTalent est née d'un constat simple : l'Afrique regorge de talents
+                    tech exceptionnels qui manquent de visibilité et de missions à leur mesure.
+                    Notre parcours est marqué par l'innovation et la passion de partager avec notre communauté.
+                    Depuis notre lancement, nous avons accompagné plus de 2 500 freelances dans leur développement
+                    professionnel et connecté des centaines d'entreprises aux meilleurs talents du continent.
+                </p>
+            </div>
         </section>
 
-    <section>
-        <h2>Notre équipe</h2>
-        <p>Des passionnés du numérique au service des freelances africains.</p>
+        <section class="about-equipe">
+            <h2>Notre équipe</h2>
+            <p class="section-sous-titre">Des passionnés du numérique au service des freelances africains.</p>
 
-            <div>
-                <img src="images/JeanDupont.jpg" alt="image du Directeur general" height="350px" width="300px">
-                <h3>Jean Dupont</h3>
-                    <p>Directeur Général</p>
-                <div>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <div class="equipe-grid">
+                <div class="membre-card">
+                    <img src="images/JeanDupont.jpg" alt="image du Directeur general">
+                        <h3>Jean Dupont</h3>
+                        <p>Directeur Général</p>
+                    <div class="membre-reseaux">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
-            </div>
-
-            <div>
-                <img src="images/SopieMartin.jpg" alt="image du responsable marketing" height="350px" width="300px">
-                <h3>Sophie Martin</h3>
-                    <p>Responsable Marketing</p>
-                <div>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            
+                <div class="membre-card">
+                    <img src="images/SophieMartin.jpg" alt="image du responsable marketing">
+                        <h3>Sophie Martin</h3>
+                        <p>Responsable Marketing</p>
+                    <div class="membre-reseaux">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
-            </div>
+            
 
-            <div>
-                <img src="images/Aliseck.jpg" alt="image du chef de projet" height="350px" width="300px">
-                <h3>Ali Seck</h3>
-                    <p>Chef de Projet</p>
-                <div>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>   
-            </div>
+                <div class="membre-card">
+                    <img src="images/Aliseck.jpg" alt="image du chef de projet">
+                        <h3>Ali Seck</h3>
+                        <p>Chef de Projet</p>
+                    <div class="membre-reseaux">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>   
+                </div>
 
-            <div>
-                <img src="images/MahamadouNdiaye.jpg" alt="image du responsable Design" height="350px" width="300px">
-                <h3>Mahadou Ndiaye</h3>
-                    <p>Responsable Design</p>
-                <div>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <div class="membre-card">
+                    <img src="images/MahamadouNdiaye.jpg" alt="image du responsable Design">
+                        <h3>Mahadou Ndiaye</h3>
+                        <p>Responsable Design</p>
+                    <div class="membre-reseaux">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
             </div>
         </section>
    
-        <section>
+        <section class="about-valeurs">
             <h2>Nos valeurs</h2>
-            <p>Les principes qui guident chacune de nos décisions.</p>
-            <div>
-                <img src="" alt="">
-                <h3><i class="fa-solid fa-lightbulb"></i> Innovation</h3>
-                <p>Nous repoussons sans cesse nos limites pour proposer des solutions adéquates aux défis numérique africains.</p>
-            </div>
+            <p class="section-sous-titre">Les principes qui guident chacune de nos décisions.</p>
+            
+            <div class="valeurs-grid">
+                <div class="valeur-card">
+                    <h3><i class="fa-solid fa-lightbulb"></i> Innovation</h3>
+                    <p>Nous repoussons sans cesse nos limites pour proposer des solutions adéquates aux défis numérique africains.</p>
+                </div>
 
-            <div>
-                <img src="" alt="">
-                <h3><i class="fa-solid fa-universal-access"></i> Accessibilités</h3>
-                <P>Nous croyons que chacun doit pouvoir bénéficier de nos services quels que soient ses moyens ou sa localisation.</P>
-            </div>
+                <div class="valeur-card">
+                    <h3><i class="fa-solid fa-universal-access"></i> Accessibilités</h3>
+                    <P>Nous croyons que chacun doit pouvoir bénéficier de nos services quels que soient ses moyens ou sa localisation.</P>
+                </div>
 
-            <div>
-                <img src="" alt="">
-                <h3><i class="fa-solid fa-users"></i> Communauté</h3>
-                <p>Nous plaçons les relations humaines au centre de notre démarche. La confiance est notre fondation.</p>
-            </div>
+                <div class="valeur-card">
+                    <h3><i class="fa-solid fa-users"></i> Communauté</h3>
+                    <p>Nous plaçons les relations humaines au centre de notre démarche. La confiance est notre fondation.</p>
+                </div>
 
-            <div>
-                <img src="" alt="">
-                <h3><i class="fa-solid fa-star"></i> Excellence</h3>
-                <p>Nous vison la qualité et l'amélioration continue dans tout ce que nous faisons, pour nos freelances et nos clients.</p>
+                <div class="valeur-card">
+                    <h3><i class="fa-solid fa-star"></i> Excellence</h3>
+                    <p>Nous vison la qualité et l'amélioration continue dans tout ce que nous faisons, pour nos freelances et nos clients.</p>
+                </div>
             </div>
         </section>
 
-        <section>
+        <section class="about-chiffres">
             <h2>Chiffres clés</h2>
-            <p>AfriTalent en quelques Chiffres qui parlent d'eux-mêmes.</p>
-            <div>
-                <div>
+            <p class="section-sous-titre">AfriTalent en quelques Chiffres qui parlent d'eux-mêmes.</p>
+
+            <div class="chiffres-grid">
+
+                <div class="chiffre-card">
+                    <span class="chiffre-nombre">+2500</span>
                     <p>Projet réalisés</p>
                 </div>
-                <div>
+
+                <div class="chiffre-card">
+                    <span class="chiffre-nombre">98%</span>
                     <p>Clients satisfaits</p>
                 </div>
-                <div>
+
+                <div class="chiffre-card">
+                    <span class="chiffre-nombre">+85</span>
                     <p>Partenaires</p>
                 </div>
-                <div>
-                    <p>Année d'expérience</p>
+
+                <div class="chiffre-card">
+                    <span class="chiffre-nombre">+4</span>
+                    <p>Années d'expérience</p>
                 </div>
             </div>
         </section>
 
-        <section>
-            <div>
-                <h2>Rejoignez l'aventure</h2>
-                <p>Ensemble, construisons l'avenir du travail tech en Afrique.</p>
-            </div>
+        <section class="about-cta">
+            <h2>Rejoignez l'aventure</h2>
+            <p>Ensemble, construisons l'avenir du travail tech en Afrique.</p>
+            <a href="freelances.html" class="cta-btn">Rejoindre AfriTalent</a>
+        
         </section>
     </main>
 
@@ -179,7 +197,7 @@
                 <h4>liens utiles</h4>
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
-                    <li><a href="feelances.html">Freelances</a></li>
+                    <li><a href="freelances.html">Freelances</a></li>
                     <li><a href="about.html">À propos</a></li>
                     <li><a href="tarifs.html">Tarifs</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -206,5 +224,6 @@
         <p>&copy; 2026 AfriTalent. Tous droits réservés.</p>
     </footer>
 
+    <script src="JS/main.js"></script>
 </body>
 </html>
