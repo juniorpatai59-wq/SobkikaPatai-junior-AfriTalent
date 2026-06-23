@@ -1,9 +1,11 @@
+/* bloc de formulaire de contact */
 .contact-formulaire {
+    /* fond degradé oblique */
     background: linear-gradient(135deg, #1A1A2E 0%, #2d1b69 50%, #1A1A2E 100% );
     border: 2px dashed #3c1291;
     border-radius: 16px;
     padding: 30px;
-    height: fit-content;
+    height: fit-content; /*s'adapte à la hauteur exacte de son contenu intérieur*/
     box-shadow: 0 8px 32px rgba(232, 168, 53, 0.2);
 }
 
@@ -20,6 +22,7 @@
     margin-bottom: 25px;
 }
 
+/* zone principale de contenu: separé par les infos et le formulaire en 2 colones */
 .contact-contenu {
     max-width: 1200px;
     padding: 60px 40px;
@@ -34,6 +37,7 @@ main {
     background-color: var(--couleur-secondaire);   
 }
 
+/* en tête de la page de contact */
 .contact-hero {
     text-align: center;
     background-color: var(--couleur-secondaire);
@@ -49,6 +53,7 @@ main {
     color: rgba(255, 255, 255, 0.75);
 }
 
+/* un groupe de formulaire aligné horizontalement son label et son input */
 .form-groupe {
     display: flex;
     justify-content: space-between;
@@ -57,12 +62,14 @@ main {
     gap: 5px;
 }
 
+/* la balise html form en elle même */
 .contact-formulaire form {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*aligne les groupes inputs verticalement*/
     justify-content: space-between;
 }
 
+/* libellé */
 .form-groupe label {
     color: var(--couleur-blanc);
     font-weight: 600;
@@ -71,10 +78,11 @@ main {
     flex-shrink: 0;
 }
 
+/* style commun pour toutes les zones de saisies */
 .form-groupe input,
 .form-groupe select,
 .form-groupe textarea {
-    flex: 1;
+    flex: 1; /*prend tout l'espace disponible restant à côté du label*/
     padding: 10px 12px;
     border: none;
     border-radius: 5px;
@@ -85,34 +93,40 @@ main {
     transition: box-shadow 0.3s ease;
 }
 
+/* effet d'activation focus quand l'utilisateur clique ou ecrit dans un champ */
 .form-groupe input:focus,
 .form-groupe select:focus,
 .form-groupe textarea:focus {
-    outline: none;
+    outline: none; /*supprime la bordure par defaut des navigateurs*/
     box-shadow: 0 0 15px 5px var(--couleur-blanc);
 }
 
+/* style du texte indicatif à l'interieur des champs vides */
 .form-groupe input::placeholder,
 .form-groupe textarea::placeholder {
     color: rgba(255, 255, 255, 0.4);
 }
 
+/* effet au suvol d'un champ */
 .form-groupe input:hover,
 .form-groupe select:hover,
 .form-groupe textarea:hover {
     box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.4);
 }
 
+/* configuration spécifique pour la zone de message textuel */
 .form-groupe textarea {
     height: 100px;
-    resize: vertical;
+    resize: vertical; /*permet à l'utilisateur d'agrandire ce champ uniquement*/
 }
 
+/* style des options du menu déroulant(select) */
 .form-groupe select option {
     background-color: #05000f;
     color: var(--couleur-blanc);
 }
 
+/* boutons & etats de validation (succès & erreur) */
 .form-groupe-boutons {
     display: flex;
     justify-content: center;
@@ -120,6 +134,7 @@ main {
     margin-top: 20px;
 }
 
+/* bouton d'envoi du formulaire */
 .contact-formulaire button[type="submit"] {
     width: 100%;
     padding: 14px 0;
@@ -140,6 +155,7 @@ main {
     box-shadow: 0 0 15px var(--couleur-blanc);
 }
 
+/* message d'erreur(gérés par js) */
 .error {
     color: #ffcccc;
     font-size: 12px;
@@ -148,6 +164,7 @@ main {
     text-align: right;
 }
 
+/* boite de confirmation en cas de succès d'envoi */
 .success-message {
     display: none;
     background-color: rgba(46, 213, 115, 0.15);
@@ -160,6 +177,7 @@ main {
     text-align: center;
 }
 
+/* colones de droite regroupant les informations textuelles et la carte */
 .contact-infos {
     display: flex;
     flex-direction: column;
@@ -179,6 +197,7 @@ main {
     margin-bottom: 10px;
 }
 
+/* petites fiches d'informmations */
 .info-card {
     display: flex;
     align-items: flex-start;
@@ -195,6 +214,7 @@ main {
     transform: translateY(-3px);
 }
 
+/* style des icones à gauche de chauqe fiche d'info */
 .info-card i {
     font-size: 22px;
     color: var(--couleur-principale);
@@ -215,6 +235,7 @@ main {
     margin-bottom: 0;
 }
 
+/* style de l'Iframe Google Maps */
 .contact-map {
     width: 100%;
     height: 220px;
@@ -227,21 +248,54 @@ footer {
     margin-top: 0;
 }
 
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 4px;
+    min-height: 18px;
+}
+
+.success-message {
+    display: none;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    margin-top: 15px 20px;
+    padding: 20px;
+    font-weight: 600;
+}
+
+
+.success-message i {
+    margin-right: 8px;
+}
+
+/* tablette et ecran intermediare */
 @media (max-width: 768px) {
+    /* la grille à 2 colones bascule en 1 colone verticale */
     .contact-contenu {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /*le formulaire passe au dessus ou en dessous des infos*/
         padding: 40px 24px;
         gap: 30px;
     }
 
+    /* ajout d'un padding-top important pour eviter que la barre de navigation ne cache le titre*/
     .contact-hero { padding: 120px 24px 40px; }
 }
 
+/* mobile */
 @media (max-width: 480px) {
     .contact-hero h1 { font-size: 26px; }
     .contact-contenu { padding: 30px 16px; }
+
+    /* le label et l'input ne sont plus côte à côte mais empilés verticalement */
     .form-groupe { flex-direction: column; align-items: flex-start; }
+
+    /* reinitialisation de la largeur pour l'alignement sur ordinteur */
     .form-groupe label { min-width: auto; }
+
+    /* les élément de saisie occupent désormais 100% de la largeur du téléphone */
     .form-groupe input,
     .form-groupe select,
     .form-groupe textarea { width: 100%; }

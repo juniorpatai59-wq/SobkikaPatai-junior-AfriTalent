@@ -1,12 +1,13 @@
+/* section hero principale */
 .hero {
-    position: relative;
+    position: relative; /*point d'ancrage pour la video et l'overlay absolute*/
     width: 100%;
-    height: 100vh;
+    height: 100vh; /*prend 100% de la hauteur de l'ecran*/
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 100% !important;
+    max-width: 100% !important; /*force l'annulation des contraintes globales*/
     padding: 0 !important;
 }
 
@@ -25,6 +26,7 @@ body {
     padding-top: 0;
 }
 
+/* modele de section stantardcentré et con,traint */
 section {
     padding: 60px 40px;
     max-width: 1200px;
@@ -32,16 +34,18 @@ section {
     margin-right: auto;
 }
 
+/* video plein ecran en arrier plan */
 .hero-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /*ajuste la video sans alterer son ration d'aspect*/
     z-index: 0;
 }
 
+/* caque translucide limitant l'eclat de la video pour detacher le texte */
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -52,9 +56,10 @@ section {
     z-index: 1;
 }
 
+/* boite de contenu principale au premier plan */
 .hero-contenu {
     position: relative;
-    z-index: 2;
+    z-index: 2; /*passe au dessus de la video et du calque*/
     text-align: center;
     padding: 0 20px;
     max-width: 900px;
@@ -78,11 +83,12 @@ section {
     margin-right: auto;
 }
 
+/* conteneur des boutons d'actions cta */
 .hero-boutons {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*evite les cassure si deux longs boutons se croisent*/
     margin-bottom: 50px;
 }
 
@@ -101,19 +107,21 @@ section {
 }
 
 .hero-boutons a:hover {
-    transform: translateY(-3px);
+    transform: translateY(-3px); /*effet d'elevation mecanique*/
     opacity: 0.9;
 }
 
+/* ligne d'indicateurs de performance clés */
 .hero-stats {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; /*conserve l'alignement en ligne sur ordinateur*/
     flex-direction: row;
     align-items: center;
 }
 
+/* badge individuel de statistique */
 .stat {
     background-color: transparent;
     border: 2px solid var(--couleur-blanc);
@@ -129,6 +137,7 @@ section {
     margin-bottom: 0;
 }
 
+/* section comment ça marche */
 .comment-ca-marche {
     background-color: var(--couleur-secondaire);
     max-width: 100%;
@@ -154,15 +163,17 @@ section {
     margin-bottom: 50px;
 }
 
+/* dispositif en grille à 4 colonnes */
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); /*divise l'espace en 4 volets equitable*/
     gap: 25px;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
+/* carte decrivant une etape du processus */
 .card-etape {
     background-color: #2e2e3e;
     border-radius: 12px;
@@ -204,6 +215,7 @@ section {
     gap: 8px;
 }
 
+/* section categories */
 .categories {
     background-color: var(--couleur-secondaire);
     max-width: 100%;
@@ -221,6 +233,7 @@ section {
     margin-bottom: 50px;
 }
 
+/* configuration à 3 colonnes */
 .categories-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -230,6 +243,7 @@ section {
     margin-right: auto;
 }
 
+/* fiche d'une categorie de metier */
 .categorie-card {
     background-color: #2e2e3e ;
     border-radius: 12px;
@@ -238,13 +252,13 @@ section {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    border-bottom: 3px solid transparent;
+    border-bottom: 3px solid transparent; /*prepare l'espace pour l'animation hover sans decalage*/
 }
 
 .categorie-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    border-bottom: 3px solid var(--couleur-principale);
+    border-bottom: 3px solid var(--couleur-principale); /*apparition de la bordure basse dorée*/
 }
 
 .categorie-card i {
@@ -255,6 +269,7 @@ section {
     transition: transform 0.3s ease;
 }
 
+/* effet d'expansion de l'icon lors du survol de la carte parente */
 .categorie-card:hover i {
     transform: scale(1.15);
 }
@@ -270,6 +285,7 @@ section {
     margin-bottom: 0;
 }
 
+/* section temoignages */
 .temoignages {
     background-color: var(--couleur-secondaire);
     max-width: 100%;
@@ -293,7 +309,7 @@ section {
 
 .temoignages-grid {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr); /*alignement stantard de 3 blocs d'avis */
     gap: 30px;
     max-width: 1200px;
     margin-left: auto;
@@ -313,6 +329,7 @@ section {
     transform: translateY(-5px);
 }
 
+/* portrait de l'auteur du temognage */
 .temoignage-card img {
     width: 80px;
     height: 80px;
@@ -351,6 +368,7 @@ section {
     font-size: 13px;
 }
 
+/* bloc cta integré */
 .cta-card {
     background-color: rgba(255, 255, 255, 0.1);
     max-width: 1200px;
@@ -387,6 +405,7 @@ section {
     text-align: left;
 }
 
+/* bouton d'action principal de la bannière */
 .cta-btn {
     display: inline-block;
     padding: 16px 40px;
@@ -406,10 +425,15 @@ section {
     color: #d5d5d5;
 }
 
+/* media queries, configuration pour tablette */
 @media (max-width: 768px) {
     .hero-texte h1 { font-size: 34px; }
+
+    /* reduction des grilles complexeà 2 colonnes par rangée */
     .cards-container { grid-template-columns: repeat(2, 1fr); }
     .categories-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* la bannière cta bascule d'une structuree horizontale à un empilement vertical centre */
     .cta-card {
         flex-direction: column;
         text-align: center;
@@ -420,9 +444,14 @@ section {
     .cta-texte p { text-align: center; }
 }
 
+/* configuration mobile */
 @media (max-width: 480px) {
     .hero-texte h1 { font-size: 26px; }
+
+    /* toutes les grilles passent en affichage unitaire vertical */
     .cards-container { grid-template-columns: 1fr; }
     .categories-grid { grid-template-columns: 1fr; }
+
+    /* les statistique du hero s'empilent verticalement au lieu de s'ecraser */
     .hero-stats { flex-direction: column; }
 }

@@ -1,13 +1,15 @@
+/* SECTION HERO(en-tête de page) */
 .about-hero {
-    position: relative;
+    position: relative; /* Référence pour le positionnement absolu de la vidéo et de l'overlay */ 
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    height: 100vh; /*prend 100% de la hauteur de l'ecran */
+    overflow: hidden; /*empêche les éléments internes de déborder*/
     display: flex;
-    align-items: center;
+    align-items: center; 
     justify-content: flex-start;
 }
 
+/* video d'arrière plan */
 .about-video {
     position: absolute;
     top: 0;
@@ -18,6 +20,7 @@
     z-index: 0;
 }
 
+/* filtre sombre sur la video pour garantir la lisibilité du texte */
 .about-overlay {
     position: absolute;
     top: 0;
@@ -25,33 +28,36 @@
     width: 100%;
     height: 100%;
     background-color: rgba(26, 26, 46, 0.70);
-    z-index: 1;
+    z-index: 1; /*se place juste au-dessus de la video mais sous le texte*/
 }
 
+/* bloc contenantle texte dans hero */
 .about-hero-contenu {
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
     position: relative;
-    z-index: 2;
-    padding: 0  0 55px 200px;
+    z-index: 2; /*se plase au dessus de l'overlay sombre*/
+    padding: 0  0 55px 200px; /*grand décalage à gauche pour le design*/
     max-width: 900px;
     text-align: left;
 }
 
+/* petit badge textuel optionnel au dessus du grand titre */
 .about-hero-badge {
     display: inline-block;
     background: rgba(232, 168, 53, 0.12);
-    border: 1px solid rgba(232, 168, 53, 0.35);
+    border: 1px solid rgba(232, 168, 53, 0.35); /*bordure dorée semi-transparent*/
     color: var(--couleur-principale);
     font-size: 11px;
     font-weight: 600;
-    text-transform: uppercase;
+    text-transform: uppercase; /*force le tete en majuscule*/
     padding: 5px 16px;
     border-radius: 20px;
     margin-bottom: 18px;
 }
 
+/* grand titre de la page */
 .about-hero-contenu h2 {
     text-align: left !important;
     font-family: var(--police-titre); 
@@ -59,13 +65,15 @@
     font-weight: 700;
     color: var(--couleur-blanc);
     margin-bottom: 16px;
-    line-height: 1.1;
+    line-height: 1.1; /*rapproche les lignes pour un effet d'impact*/
 }
 
+/* coloration d'un mot spécifique dans le titre */
 .about-hero-contenu h2 span {
     color: var(--couleur-principale);
 }
 
+/* petite ligne de décoration sous le titre */
 .about-hero-ligne {
     width: 50px;
     height: 3px;
@@ -74,6 +82,7 @@
     margin-bottom: 20px;
 }
 
+/* paragraphe descriptif du hero */
 .about-hero-contenu p {
     font-size: 17px;
     font-weight: 400;
@@ -81,12 +90,12 @@
     line-height: 1.85;
     text-align: left;
     margin-bottom: 0;
-    padding-left: 50px;
+    padding-left: 50px; /*crée un décalage esthétique aligné avec le titre*/
     max-width: 900px;
 }
 
 main {
-    padding-top: 0;
+    padding-top: 0; /*colle le contenu tout en haut*/
 }
 
 body {
@@ -94,6 +103,7 @@ body {
     padding: 0;
 }
 
+/* sous titre stantard reutilisables dans les differentes sections */
 .section-sous-titre {
     text-align: center;
     color: #666;
@@ -102,6 +112,7 @@ body {
     margin-bottom: 45px;
 }
 
+/* remise à zero des marges externes pour garantir le plein ecran*/
 .about-hero,
 .about-equipe,
 .about-valeurs,
@@ -114,6 +125,7 @@ body {
     margin-right: 0;
 }
 
+/* harmonisation des couleurs des titres h2 dans toutes les sections */
 .about-equipe h2,
 .about-valeurs h2,
 .about-chiffres h2,
@@ -122,22 +134,25 @@ body {
     margin-bottom: 10px;
 }
 
+/* section equipe */
 .about-equipe {
     background-color: var(--couleur-secondaire);
 }
 
 .about-equipe .section-sous-titre {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6); /*adaptation du sous titre sur fond sombre*/
 }
 
+/* mise en page de la grille à 4 colones */
 .equipe-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(4, 1fr); /*4 colones de tailles egales*/
+    gap: 24px; /*espace sous les cartes*/
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 0 auto; /*centre la grille dans la page*/
 }
 
+/* carte individuelle d'un membre de l'équipe */
 .membre-card {
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(232, 168, 53, 0.2);
@@ -147,20 +162,23 @@ body {
     transition: transform 0.35s ease, border-color 0.35s ease;
 }
 
+/* effet de survol(hover) sur la carte de membre */
 .membre-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--couleur-principale);
+    transform: translateY(-8px); /*souleve la carte vers le haut*/
+    border-color: var(--couleur-principale); /*illumine la bordure*/
 }
 
+/* photo du membre */
 .membre-card img {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    border-radius: 50%; /*rend l'image parfaitement ronde*/
     object-fit: cover;
     margin: 0 auto 16px;
     border: 2px solid var(--couleur-principale);
 }
 
+/* nom du membre */
 .membre-card h3 {
     color: var(--couleur-blanc);
     font-size: 16px;
@@ -168,6 +186,7 @@ body {
     margin-bottom: 4px;
 }
 
+/* poste/ rôle du membre*/
 .membre-card > p {
     color: var(--couleur-principale);
     font-size: 13px;
@@ -175,25 +194,28 @@ body {
     margin-bottom: 14px;
 }
 
+/* conteneur des icones de réseaux sociaux */
 .membre-reseaux {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
+/* lien des réseaux sociaux(cercles contenant l'icone) */
 .membre-reseaux a {
     width: 32px;
     height: 32px;
     border-radius: 50%;
     border: 1px solid rgba(232, 168, 53, 0.3);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /*centre l'icone verticalement*/
+    justify-content: center; /*centre l'icone horizontalement*/
     color: rgba(255, 255, 255, 0.6);
     font-size: 13px;
     transition: border-color 0.25s ease, color 0.25s ease, background-color 0.25s ease;
 }
 
+/* effet au suvol d'un réseau social */
 .membre-reseaux a:hover {
     border-color: var(--couleur-principale);
     color: var(--couleur-principale);
@@ -201,6 +223,7 @@ body {
     opacity: 1;
 }
 
+/* section des valeurs */
 .about-valeurs {
     background-color: #13132a;
 }
@@ -209,6 +232,7 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
+/* grille des 4 valeurs */
 .valeurs-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -217,16 +241,18 @@ body {
     margin: 0 auto;
 }
 
+/* cartes individuelle */
 .valeur-card {
     background-color: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(232, 168, 53, 0.2);
     border-radius: 16px;
     padding: 30px 22px;
-    position: relative;
-    overflow: hidden;
+    position: relative; /* nécessaire pour le positionnement de la bordure haute animée*/
+    overflow: hidden; /* coupe ce qui dépasse, notament les arrondis de la barre supperieur*/
     transition: transform 0.35s ease, border-color 0.35s ease;
 }
 
+/* creation d'une fine ligne degradrée decorative cahée en haut de la carte */
 .valeur-card::before {
     content: '';
     position: absolute;
@@ -235,19 +261,22 @@ body {
     right: 0;
     height: 3px;
     background: linear-gradient(90deg, #B8901F, var(--couleur-principale));
-    opacity: 0;
+    opacity: 0; /* invisible par defaut */
     transition: opacity 0.35s ease;
 }
 
+/* effet de survol de la carte de valeur */
 .valeur-card:hover {
     transform: translateY(-6px);
     border-color: rgba(232, 168, 53, 0.5);
 }
 
+/* fait apparaitre la ligne degradée supérieur lors du survol */
 .valeur-card:hover::before {
     opacity: 1;
 }
 
+/* titre de la valeur avec icone integrée */
 .valeur-card h3 {
     color: var(--couleur-blanc);
     font-size: 16px;
@@ -258,11 +287,13 @@ body {
     gap: 10px;
 }
 
+/* style de l'icone dans le titre */
 .valeur-card h3 i {
     color: var(--couleur-principale);
     font-size: 20px;
 }
 
+/* texte descriptif de la valeur */
 .valeur-card p {
     color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
@@ -270,6 +301,7 @@ body {
     margin-bottom: 0;
 }
 
+/* section chiffres */
 .about-chiffres {
     background-color: var(--couleur-secondaire);
 }
@@ -278,6 +310,7 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
+/* grille des statistique à 4 colones */
 .chiffres-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -286,6 +319,7 @@ body {
     margin: 0 auto;
 }
 
+/* carte de statistique individuelle */
 .chiffre-card {
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(232, 168, 53, 0.2);
@@ -298,6 +332,7 @@ body {
     justify-content: center;
 }
 
+/* libellé du chiffre  */
 .chiffre-card p {
     color: rgba(255, 255, 255, 0.65);
     font-size: 14px;
@@ -311,6 +346,7 @@ body {
     border-color: var(--couleur-principale);
 }
 
+/* style di grand nombre animé */
 .chiffre-nombre {
     display: block;
     font-family: var(--police-titre);
@@ -321,6 +357,7 @@ body {
     margin-bottom: 10px;
 }
 
+/* section cta */
 .about-cta {
     background-color: #13132a;
     text-align: center;
@@ -333,6 +370,7 @@ body {
     margin: 0 auto 32px;
 }
 
+/* style du bouton d'action principal */
 .about-cta .cta-btn {
     display: inline-block;
     background-color: var(--couleur-principale);
@@ -346,29 +384,35 @@ body {
     letter-spacing: 0.5px;
 }
 
+/* effet de survol sur le bouton cta */
 .about-cta .cta-btn:hover {
     background-color: #f0b830;
-    transform: translateY(-3px);
-    opacity: 1;
+    transform: translateY(-3px); /*effet de rebond vers le haut*/
+     opacity: 1; /*s'assure que l'opacité reste totale */
 }
 
 footer {
     margin-top: 0;
 }
 
+/* media queries, adaptation mobile & tablette */
+/* tablette et petits ecrans */
 @media (max-width: 768px) {
+    /* ajustement de la disposition textuelle du hero */
     .about-hero-contenu {
-        padding: 0 0 40px 24px;
+        padding: 0 0 40px 24px; /*on reduit considerablement la marge */
     }
 
-    .about-hero-contenu h2 { font-size: 36px; }
+    .about-hero-contenu h2 { font-size: 36px; } /*titre plus petit pour eviter qu'il ne deborde */
+    /* baculement de toutes les grilles de 4 à 2 colones */
     .equipe-grid,
     .valeurs-grid,
     .chiffres-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 18px;
+        grid-template-columns: repeat(2, 1fr); /* 2 colones par lignes */
+         gap: 18px; /*espacement reduit */
     }
 
+    /* reduction globale des espacement internes des sections pour ecrans moyens */
     .about-equipe,
     .about-valeurs,
     .about-chiffres,
@@ -377,15 +421,24 @@ footer {
     }
 }
 
+/* smartphones */
 @media (max-width: 480px) {
-    .about-hero-contenu h2 { font-size: 28px; }
+    .about-hero-contenu h2 { font-size: 28px; } /*titre encore plus compact pour mobile */
+    /* les grilles d'équipe et de valeurs passent sur une seule colonne verticale */
+
     .equipe-grid,
-    .valeurs-grid { grid-template-columns: 1fr; }
+    .valeurs-grid { grid-template-columns: 1fr; } /* une seule carte prend toutes la largeur */
+
+    /* les statistique restent lisibles sur deux colones serrées */
     .chiffres-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* ajustement final des marges internes pour optimiser l'espace des petits écrans*/
     .about-equipe,
     .about-valeurs,
     .about-chiffres,
     .about-cta { padding: 50px 16px; }
+
+    /* bouton appel à l'action prend 100% de la largeur du smartphone */
     .about-cta .cta-btn { 
         width: 100%;
         text-align: center;

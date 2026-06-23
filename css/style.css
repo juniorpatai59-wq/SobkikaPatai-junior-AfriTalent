@@ -1,9 +1,12 @@
 :root{
+    /* variable de couleurs */
     --couleur-principale: #E8A835;
     --couleur-secondaire: #1A1A2E;
     --couleur-texte: #333333;
-    --couleur-fond: #F9F9F9;
+    --couleur-fond: #F9F9F9; 
     --couleur-blanc: #FFFFFF;
+
+    /* typographies(polices de caractères) */
     --police-titre: 'poppins', sans-serif;
     --police-corps: 'Inter', sans-serif
 }
@@ -11,11 +14,11 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /*integre les bordures et padding dans le calcul de la largeur totale*/
 }
 
 main {
-    padding-top: 80px;
+    padding-top: 80px; /*compense la hauteur de la barre de navigation fixe pour eviter que le contenu ne passe en dessous*/
 }
 
 body{
@@ -27,13 +30,15 @@ body{
     padding-top: 0;
 }
 
+/* assignation de la police d'en tête */
 h1, h2, h3, h4 {
     font-family: var(--police-titre);
 }
 
+/* surcharge des comprtement de collapse natifs de bootstrap */
 #mainNavbar .navbar-collapse {
-    display: flex !important;
-    flex-direction: row !important;
+    display: flex !important; /*pour empêcher que le bootstrap et mon css n'entrent en conflit*/
+    flex-direction: row !important; /*pour ne pas le bootstrap ecrase mon css*/
 }
 
 #mainNavbar .navbar-nav {
@@ -43,13 +48,15 @@ h1, h2, h3, h4 {
     list-style: none;
 }
 
+/* barre de navigation principale */
 #mainNavbar {
     background-color: var(--couleur-secondaire);
     padding: 15px 20px;
     box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /*permet la transition douce au scroll*/
 }
 
+/* identité visuelle de la marque */
 #mainNavbar .navbar-brand {
     color: var(--couleur-principale);
     font-family: var(--police-titre);
@@ -59,9 +66,10 @@ h1, h2, h3, h4 {
 }
 
 #mainNavbar .navbar-brand i {
-    margin-right: 8px;
+    margin-right: 8px; /*ecarte l'icone du texte du logo*/
 }
 
+/* liens individuels de navigation */
 #mainNavbar .nav-link {
     color: var(--couleur-blanc);
     font-family: var(--police-corps);
@@ -70,9 +78,10 @@ h1, h2, h3, h4 {
     padding: 8px 15px;
     border-radius: 6px;
     transition: all 0.3s ease;
-    position: relative;
+    position: relative; /*point d'ancrage indispensable pour la ligne magique du ::after*/
 }
 
+/* construction de ligne de survol sous les liens caché par defaut*/
 #mainNavbar .nav-link::after {
     content: '';
     position: absolute;
@@ -82,10 +91,10 @@ h1, h2, h3, h4 {
     height: 2px;
     background-color: var(--couleur-principale);
     transition: all 0.3s ease;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /*permet à lka ligne de s'ouvrir depuis le centre*/
 }
 
-
+/* deploiment de la ligne de survol au passage de la souris */
 #mainNavbar .nav-link:hover::after {
     width: 70%;
 }
@@ -93,17 +102,19 @@ h1, h2, h3, h4 {
 
 #mainNavbar .nav-link:hover {
     color: var(--couleur-principale);
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.05); /*leger fond translucide*/
 }
 
 #mainNavbar .navbar-toggler {
     border-color: var(--couleur-principale);
 }
 
+/* force l'icone hamburger noire de bootstrap à passer en blanc via inversion de couleur*/
 #mainNavbar .navbar-toggler-icon {
     filter: invert(1);
 }
 
+/* bouton d'action fort de la navbar */
 .btn-rejoindre {
     background-color: var(--couleur-principale) !important;
     color: var(--couleur-secondaire) !important;
@@ -121,11 +132,13 @@ h1, h2, h3, h4 {
     display: none !important;
 }
 
+/* classe dynamique ajoutée via javascript lorque l'utilisateur descend de la page */
 #mainNavbar.scrolled {
-    padding: 8px 20px;
+    padding: 8px 20px; /*reduit la hauteur de la navbar*/
     box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5);
 }
 
+/* pied de page */
 footer{
     background-color: var(--couleur-secondaire);
     color: var(--couleur-blanc);
@@ -133,6 +146,7 @@ footer{
     margin-top: 60px;
 }
 
+/* conteneur principale de l'arborescence des liens du footer */
 .footer-colonnes {
     display: flex;
     justify-content: space-between;
@@ -145,11 +159,13 @@ footer{
     padding: 0 20px;
 }
 
+/*  la premiere colonne prend plus de place */
 .footer-colonnes > div:first-child {
     flex: 2;
     max-width: 300px;
 }
 
+/* les colonnes suivantes de liens prennent des proportions egales */
 .footer-colonnes > div:not(:first-child) {
     flex: 1;
 }
@@ -173,7 +189,7 @@ footer ul li a {
     color: var(--couleur-blanc);
     text-decoration: none;
     font-size: 14px;
-    opacity: 0.8;
+    opacity: 0.8; /*legerement estompé par defaut*/
     transition: opacity 0.3s ease;
 }
 
@@ -194,6 +210,7 @@ footer > p {
     margin-right: auto;
 }
 
+/* zone des réseaux sociaux */
 .footer-reseaux {
     display: flex;
     gap: 12px;
@@ -217,7 +234,7 @@ footer > p {
 .footer-reseaux a:hover {
     background-color: var(--couleur-principale);
     color: var(--couleur-secondaire);
-    transform: translateY(-3px);
+    transform: translateY(-3px); /*effet de mico rebond vers le haut*/
 }
 
 h1 {
@@ -250,10 +267,11 @@ p {
     margin-bottom: 15px;
 }
 
+/* section globale de la page */
 section {
     padding: 60px 40px;
     max-width: 1200px;
-    margin-left: auto;
+    margin-left: auto; /*centre les section sur les ecran ultra larges*/
     margin-right: auto;
 }
 
@@ -359,8 +377,10 @@ body.dark-mode footer {
     opacity: 1;
     transform: translateY(0);
 }
-
+/* media queries */
+/* extension tablette */
 @media (max-width: 768px) {
+    /* bascule la navbar en affichage vertical empilé pour le menu deroulant */
     #mainNavbar .navbar-collapse{
         flex-direction: column !important;
     }
@@ -370,18 +390,19 @@ body.dark-mode footer {
         gap: 0;
     }
 
+    /* le footer casse sa structure horizontale pour empiler ses colonnes verticalement */
     .footer-colonnes {
         flex-direction: column !important;
         gap: 30px;
     }
 
     .footer-colonnes > div:first-child {
-        max-width: 100%;
+        max-width: 100%; /* permet a la premiere colonne de s'etendre entierement*/
     }
 }
-
+/* extension mobile */
 @media (max-width: 480px) {
-    h1 { font-size: 28px; }
+    h1 { font-size: 28px; } /* diminution homothétique des titres*/
     h2 { font-size: 24px; }
-    footer { padding: 40px 20px 20px; }
+    footer { padding: 40px 20px 20px; } /* resserrement des paddings pour gagner de l'espace sur un petit ecran */
 }

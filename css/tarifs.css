@@ -1,7 +1,8 @@
 main {
-    padding-top: 0;
+    padding-top: 0; /*supprime l'space supérieur par defaut pour laisser le hero coller en haut*/
 }
 
+/* force toutes les sections majeures de la page à occuper toutes la largeur sans marges externes */
 .tarifs-hero,
 .tarifs-section,
 .tarifs-faq {
@@ -12,6 +13,7 @@ main {
     padding-right: 0;
 }
 
+/* section hero en yête */
 .tarifs-hero {
     background-color: var(--couleur-secondaire);
     padding: 140px 70px 80px;
@@ -21,10 +23,11 @@ main {
 .tarifs-hero-contenu {
     max-width: 700px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column; /*aligne le badge le titre et le texte verticalement*/
+    align-items: flex-start; /*aligne tous les enfants à gauche*/
 }
 
+/* petit badge categorie ou d'indication au dessus du titre */
 .tarifs-hero-badge {
     display: inline-block;
     background: rgba(232, 168, 53, 0.12);
@@ -49,6 +52,7 @@ main {
     text-align: left;
 }
 
+/* accentuation de couleur sur une partie du titre */
 .tarifs-hero h1 span {
     color: var(--couleur-principale);
 }
@@ -61,14 +65,15 @@ main {
     margin-bottom: 0;
 }
 
+/* conteneur horizontale des offres de pix */
 .tarifs-section {
     background-color: var(--couleur-secondaire);
     padding: 60px 70px 80px;
     width: 100%;
     display: flex;
-    justify-content: center;
-    gap: 28px;
-    align-items: stretch;
+    justify-content: center; /*centre le groupe de carte au milieu de l'ecran*/
+    gap: 28px; /*ecartement entre les carte*/
+    align-items: stretch; /*force toutes les carte à avoir exactement la même hauteur*/
 }
 
 .tarif-card {
@@ -89,16 +94,18 @@ main {
     border-color: var(--couleur-principale);
 }
 
+/* variante: style specifique pour la carte de l'offre mis en avant */
 .tarif-card--populaire {
     background-color: rgba(232, 168, 53, 0.08);
     border: 2px solid var(--couleur-principale);
-    transform: scale(1.04);
+    transform: scale(1.04); /*legerement grande que les autres*/
 }
 
 .tarif-card--populaire:hover {
     transform: scale(1.04) translateY(-6px);
 }
 
+/* badge distinctif "le plus populaire" posé sur la carte correspondante */
 .tarif-badge-populaire {
     display: inline-block;
     background-color: var(--couleur-principale);
@@ -110,10 +117,11 @@ main {
     margin-bottom: 16px;
 }
 
+/* partie haute de la carte(nom, prix) */
 .tarif-card-header {
     margin-bottom: 28px;
     padding-bottom: 24px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); /*ligne de separation fine*/
 }
 
 .tarif-card-header h2 {
@@ -125,6 +133,7 @@ main {
     margin-bottom: 12px;
 }
 
+/* blocx d'affichage du prix semantique */
 .tarif-prix {
     display: flex;
     align-items: baseline;
@@ -143,6 +152,7 @@ main {
     color: rgba(255, 255, 255, 0.5);
 }
 
+/* liste des fonctionnalités ou exclues */
 .tarif-features {
     list-style: none;
     padding: 0;
@@ -150,7 +160,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    flex: 1;
+    flex: 1; /*absorbe l'espace vide pour pousser le bouton d'action au même niveau tout en bas*/
 }
 
 .tarif-features li {
@@ -160,6 +170,7 @@ main {
     gap: 10px;
 }
 
+/* fonctionnalités incluse */
 .feature-ok {
     color: rgba(255, 255, 255, 0.85);
 }
@@ -170,6 +181,7 @@ main {
     flex-shrink: 0;
 }
 
+/* fonctionnalités non incluse */
 .feature-non {
     color: rgba(255, 255, 255, 0.3);
 }
@@ -180,6 +192,7 @@ main {
     flex-shrink: 0;
 }
 
+/* bouton d'action stantard des cartes */
 .tarif-btn {
     display: block;
     text-align: center;
@@ -202,6 +215,7 @@ main {
     transform: translateY(-2px);
 }
 
+/* variante: bouton d'action de l'offre populaire */
 .tarif-btn--populaire {
     background-color: var(--couleur-principale);
     color: var(--couleur-secondaire);
@@ -212,6 +226,7 @@ main {
     color: var(--couleur-secondaire);
 }
 
+/* bloc accordeon faq */
 .tarifs-faq {
     background-color: #13132a;
     padding: 80px 70px;
@@ -230,19 +245,22 @@ main {
     margin-bottom: 50px;
 }
 
+/* conteneur de l'accordeon */
 .tarifs-faq .accordion {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto; /*centre accordeon horizontale*/
 }
 
+/* un volet de l'accordeon */
 .tarifs-faq .accordion-item {
     background-color: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(232, 168, 53, 0.2);
-    border-radius: 12px !important;
-    margin-bottom: 12px;
-    overflow: hidden;
+    border-radius: 12px !important; /*force les angles arrondis sur tous les côtés*/
+    margin-bottom: 12px; /*créer un espace entre chaque volet de question*/
+    overflow: hidden; /*empêche les enfants de debrder des angles arrondis*/
 }
 
+/* le bouton de la question (cliquable) */
 .tarifs-faq .accordion-button {
     background-color: transparent;
     color: var(--couleur-blanc);
@@ -252,25 +270,30 @@ main {
     padding: 20px 24px;
 }
 
+/* style de la question lorsque le volet est ouvert */
 .tarifs-faq .accordion-button:not(.collapsed) {
     background-color: rgba(232, 168, 53, 0.08);
     color: var(--couleur-principale);
     box-shadow: none;
 }
 
+/* inversion de couleur pour la plèche bootstrap(elle passe du noir au blanc) */
 .tarifs-faq .accordion-button::after {
     filter: invert(1);
 }
 
+/* mutation colorée de la flèche de l'accordeon lorqu'il est deployé */
 .tarifs-faq .accordion-button:not(.collapsed)::after {
     filter: invert(0.7) sepia(1) saturate(3) hue-rotate(5deg);
 }
 
+/* supprime le halo d'accessibilité natif de bootstrap au clic pour remplacer par une bordure discrète */
 .tarifs-faq .accordion-button:focus {
     box-shadow: none;
     border-color: rgba(232, 168, 53, 0.3);
 }
 
+/* corps du texte contenant la reponse a la quetion  */
 .tarifs-faq .accordion-body {
     background-color: transparent;
     color: rgba(255, 255, 255, 0.7);
@@ -283,15 +306,17 @@ footer {
     margin-top: 0;
 }
 
+/* responsives pour tablette */
 @media (max-width: 768px) {
     .tarifs-hero {
         padding: 120px 24px 60px;
     }
 
     .tarifs-hero h1 {
-        font-size: 34px;
+         font-size: 34px; /*diminue la taille */
     }
 
+    /* le conteneur de cartes bascule d'horizontale à vertical */
     .tarifs-section {
         flex-direction: column;
         align-items: center;
@@ -299,15 +324,18 @@ footer {
         gap: 20px;
     }
 
+    /* les cartes s'etendent sur 100% de la largeur disponible de la tablette */
     .tarif-card {
         max-width: 100%;
         width: 100%;
     }
 
+    /* annulation de l'agrandissement permanent de la carte populaire pour un alignement propre en liste */
     .tarif-card--populaire {
         transform: scale(1);
     }
 
+    /* readadptation de l'effet de survol pour la cate populaire en mode liste */
     .tarif-card--populaire:hover {
         transform: translateY(-6px);
     }
@@ -317,11 +345,13 @@ footer {
     }
 }
 
+/* mobile responsive */
 @media (max-width: 480px) {
     .tarifs-hero h1 {
         font-size: 26px;
     }
 
+    /* diminution de la taille des chicffres des prix pour eviter le debordement */
     .tarif-prix strong {
         font-size: 28px;
     }

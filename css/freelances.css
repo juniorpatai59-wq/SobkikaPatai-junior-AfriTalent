@@ -1,3 +1,4 @@
+/* section hero, en tête de la page */
 .freelances-hero {
     background-color: var(--couleur-secondaire);
     padding: 246px 70px 80px;
@@ -13,6 +14,7 @@ main {
     max-width: 700px;
 }
 
+/* badge stylisé au dessus du titre principal */
 .freelances-hero-badge {
     display: inline-block;
     background: rgba(232, 168, 53, 0.12);
@@ -37,6 +39,7 @@ main {
     text-align: left;
 }
 
+/* coloration d'une portion de texte spécifique dans le titre */
 .freelances-hero h1 span {
     color: var(--couleur-principale);
 }
@@ -49,6 +52,7 @@ main {
     margin-bottom: 0;
 }
 
+/* barre de filtrage dynamique */
 .freelances-filtres {
     background-color: var(--couleur-secondaire);
     padding: 0 70px 40px;
@@ -60,6 +64,7 @@ main {
     margin: 0;
 }
 
+/* style de base des boutons de filtres */
 .filtre-btn {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(232, 168, 53, 0.2);
@@ -82,6 +87,7 @@ main {
     background: rgba(232, 168, 53, 0.08);
 }
 
+/* classe injectée par JavaScript pour identifier le filtre actif */
 .filtre-btn.actif {
     background-color: var(--couleur-principale);
     border-color: var(--couleur-principale);
@@ -89,6 +95,7 @@ main {
     font-weight: 700;
 }
 
+/* grille de presentation des freelances */
 .freelances-section {
     background-color: var(--couleur-fond);
     padding: 60px 40px;
@@ -96,10 +103,11 @@ main {
     margin: 0 ;
     max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /*3 colones de tailes egales*/
     gap: 28px;
 }
 
+/* carte freelance individuelle */
 .freelance-card {
     background-color: var(--couleur-blanc);
     border: 1px solid rgba(0, 0, 0, 0.08);
@@ -107,31 +115,34 @@ main {
     overflow: hidden;
     transition: transform 0.35s ease, box-shadow 0.35s ease;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*force le contenue interne à saligner de haut en bas*/
     padding: 36px 24px 28px;
 }
 
+/* animation au survol d'une carte */
 .freelance-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px); /*elevation de la carte*/
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1); /*ombre plus diffuse*/
 }
 
+/* avater du freelance */
 .freelance-card img {
     width: 250px;
     height: 250px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
+    border-radius: 50%; /*image parfaitement circulaire*/
+    margin: 0 auto 20px; /*centre l'image horizontalement*/
     border: 2px solid var(--couleur-principale);
-    object-fit: cover;
-    object-position: top;
+    object-fit: cover; /*recadre l'image sans la deformer*/
+    object-position: top; /*cadre de préférence le haut du portrait(le visage)*/
     display: block;
 }
 
+/* bloc contenant les informations textuelles sous l'image */
 .freelance-card-corps {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 1; /*pousse le bouton vers le bas pour que toutes les cartes aient la même hauteur*/
 }
 
 .freelance-card-corps h3 {
@@ -142,6 +153,7 @@ main {
     margin-bottom: 4px;
 }
 
+/* intitulé du metier */
 .freelance-metier {
     font-size: 13px;
     font-weight: 600;
@@ -149,21 +161,23 @@ main {
     margin-bottom: 8px;
 }
 
+/* petite biographie /description */
 .freelance-desc {
     font-size: 13px;
     color: #666;
     line-height: 1.6;
     margin-bottom: 14px;
-    flex: 1;
+    flex: 1; /*absorbe l'espace vide restant pour aligner les metriques suivantes*/
 }
 
+/* rangée des metriques(tarifs & notes etoiles */
 .freelance-infos {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /*met le tarif à gauche et la note à droite*/
     align-items: center;
     margin-bottom: 16px;
     padding: 10px 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    border-top: 1px solid rgba(0, 0, 0, 0.06); /*encadrement discret*/
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
@@ -173,13 +187,15 @@ main {
     color: var(--couleur-texte);
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 5px; /*espace entre l'icone et la valeur textuelles */
 }
 
+/* couleu de l'icone bootstrap de notation */
 .freelance-infos .bi-star-fill {
     color: var(--couleur-principale);
 }
 
+/* bouton voir le profil */
 .freelance-btn {
     display: block;
     text-align: center;
@@ -201,10 +217,12 @@ main {
     transform: translateY(-2px);
 }
 
+/* responsives design pour tablette*/
 @media (max-width: 768px) {
-    .freelances-hero { padding: 120px 40px 60px; }
+    .freelances-hero { padding: 120px 40px 60px; } /*reduction des paddings imposant de l'ordinateur*/
     .freelances-hero h1 { font-size: 34px; }
     .freelances-filtres { padding: 0 24px 30px; }
+    /* passage de la grille de 3 à 2 colonnes */
     .freelances-section { 
         grid-template-columns: repeat(2, 1fr);
         padding: 40px 24px;
@@ -212,10 +230,12 @@ main {
     }
 }
 
+/* smartphones */
 @media (max-width: 480px) {
     .freelances-hero h1 { font-size: 26px; }
     .freelances-filtres { padding: 0 16px 24px; gap: 8px; }
     .filtre-btn { font-size: 12px; padding: 7px 14px; }
+    /* passage de la grille à 1 seule colonne verticale*/
     .freelances-section {
         grid-template-columns: 1fr;
         padding: 30px 16px;
