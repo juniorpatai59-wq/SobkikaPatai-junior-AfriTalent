@@ -77,7 +77,7 @@ AfriTalent/
 1. Télécharger ou cloner le projet :
 
 ```bash
-git clone https://github.com/votre-utilisateur/votre-depot.git
+git clone https://github.com/juniorpatai59-wq/SobkikaPatai-junior-AfriTalent.git
 ```
 
 2. Ouvrir le dossier du projet.
